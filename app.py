@@ -77,7 +77,6 @@ def informations():
 
 @app.route("/prepare")
 def prepare_download():
-    dt.msg_download_link = ""
     dt.download()
     return redirect("/download")
 
@@ -87,6 +86,8 @@ def prepare_download():
 def download():
     dir_video = f'temp_files/{dt.getVideoName()}.mp4'
     dt.setState("")
+    dt.video_name = ""
+    dt.msg_download_link = ""
     if(os.path.exists(dir_video)):
         resposta = send_file(dir_video, as_attachment=True)
         return resposta
