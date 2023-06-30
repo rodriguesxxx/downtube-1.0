@@ -17,7 +17,7 @@ class Downtube:
             "-f",
             "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4",
             "-o",
-            f"src/temp_files/{self.video_name}",
+            f"temp_files/{self.video_name}",
             self.url,
         ]
         subprocess.run(cmd)
@@ -87,7 +87,7 @@ def prepare_download():
 def download():
     dir_video = f'temp_files/{dt.getVideoName()}.mp4'
     dt.setState("")
-    if(os.path.exists("src/"+dir_video)):
+    if(os.path.exists(dir_video)):
         resposta = send_file(dir_video, as_attachment=True)
         return resposta
     return ""
@@ -95,7 +95,7 @@ def download():
 @app.route("/delete/<conf>")
 def delete(conf):
     if conf == "2004":
-        dir_ = "src/temp_files/"
+        dir_ = "temp_files/"
         files = os.listdir(dir_)
         for file in files:
             os.remove(dir_+file)
