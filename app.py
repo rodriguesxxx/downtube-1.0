@@ -98,10 +98,11 @@ def delete(conf):
     if conf == "2004":
         dir_ = "temp_files/"
         files = os.listdir(dir_)
+        print(files)
         for file in files:
             os.remove(dir_+file)
         return "delete all files"
     return ""
 
 if "__main__" == __name__:
-    app.run(debug=True, host='0.0.0.0')
+    app.run()
