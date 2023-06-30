@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    filter: brightness(0.2);
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    top: 250px;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(212, 80, 80);
+    background-size: 100%;
+    display: inline-block;
+    margin: 0;
+    
+}
+
+img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+}
+
+form {
+    text-align: center;
+}
+
+input[type="text"] {
+    margin: 30px;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.btn-baixar{
+    margin-top: 20px;
+    background-color: rgb(241, 20, 20);
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    color: white;
+    font-size: 15px;
+    transition: background 0.3s;
+}
+.btn-baixar:hover{
+    background-color: rgb(136, 9, 9);
+}
+.custom-select-wrapper {
+    position: relative;
+    width: 200px;
+    margin: 0 auto;
+}
+.custom-select-wrapper span{
+    margin-bottom: 20px;
+}
+.custom-select {
+    margin: 0 auto;
+    padding: 10px 30px;
+    border: 1px solid #aaa;
+    cursor: pointer;
+}
+
+footer{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+}
+
+footer a{
+    color: #3a3a3a;
+}
+footer a:hover{
+    color: #131313;
+}
