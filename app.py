@@ -91,7 +91,7 @@ def download():
     if(os.path.exists(dir_video)):
         resposta = send_file(dir_video, as_attachment=True)
         return resposta
-    return ""
+    return "error"
 
 @app.route("/delete/<conf>")
 def delete(conf):
